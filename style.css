@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-width:100%;
+  min-height:100vh;
+  background: #46A67E center/cover no-repeat url("https://assets.codepen.io/6060109/ZigZag.png"); 
+  font-family:Montserrat;
+  display:flex;
+  justify-content:center;
+}
+
+.panel{
+  width:327px;
+  height:570px;
+  margin:4.5rem 0;
+  background-color:#ffffff;
+  box-shadow: 0px 40px 40px -20px #3C7B61;
+  border-radius:5px;
+  position:relative;
+}
+
+.close-button{
+  position:absolute;
+  right:7%;
+  top:3%;
+}
+
+.status-container{
+  padding:2.7rem 1.9rem 1.5rem;
+  text-align:center;
+}
+
+.status-container > img{
+  width:50%;
+}
+
+.status-container > h2{
+  margin:1rem 0 0.5rem;
+  color:#2F463D;
+  font-size:1.5rem;
+  font-weight:600;
+}
+
+.status-container > p{
+  font-size:0.9rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight:400;
+  color:#828282;
+  line-height: 26px;
+}
+
+.menu-container{
+  width:279px;
+  height:66px;
+  background-color:#F0FFF5;
+  margin:auto;
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+}
+
+.price-details {
+  padding:0.7rem 1rem;
+}
+
+.price-details h5{
+  font-size:0.9rem;
+  font-weight:800;
+  color:#2F463D;
+}
+
+.price-details h6{
+  color:#7A8F85;
+  font-size:1rem;
+  font-weight:500;
+  line-height:26px;
+}
+
+.price-details + a{
+  color:#467A66;
+  font-size:1rem;
+  font-weight:700;
+}
+
+.btn{
+  display:block;
+  width:279px;
+  height:50px;
+  font-size:0.9rem;
+  font-weight:800;
+  text-align:center;
+  margin:1.5rem auto 0;
+  background-color:#BDBDBD;
+  border:none;
+  border-radius:5px;;
+  color:#FFFFFF;
+  box-shadow: 0px 5px 5px 0px #00000070;
+  transition: 0.3s ease all;
+  cursor:pointer;
+}
+
+.btn:hover{
+  opacity:0.8;
+  transition: 0.3s ease all;
+}
+
+.btn-active{
+  background-color:#46A67E;
+  transition: 0.3s ease all;
+}
+
+.btn-active:hover{
+  background-color:#59D2A0;
+  transition: 0.3s ease all;
+  cursor:pointer;
+}
+
+.dot-container{
+  display:flex;
+  margin:0.7rem;
+  justify-content:center;
+}
+
+.dot{
+  width:7px;
+  height:7px;
+  border-radius:100%;
+  background-color:#E0E0E0;
+  margin:1rem;
+}
+
+.dot-green{
+  background-color:#46A67E;
+}
+
+.left-panel .btn, .left-panel .dot-container{
+  margin-top:2rem;
+}
+
+.right-panel .dot-container{
+  margin-top:2rem;
+}
+
+.left-panel,.right-panel{
+  display:none;
+}
+
+@media only screen and (min-width: 992px) {
+  
+  .panel{
+      width:360px;
+    }
+  
+  .panel h2{
+      margin:1.5rem 0 ;
+    }
+
+  .left-panel,.right-panel{
+    display:block;
+  }
+  
+  .panel:nth-of-type(2){
+      transform:scale(1.1);
+      z-index:4;
+  }
+  
+}
+
